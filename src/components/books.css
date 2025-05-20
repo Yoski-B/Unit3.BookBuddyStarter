@@ -1,0 +1,17 @@
+.booksContainer {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .booksContainer > .book {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+    justify-content: center;
+    }
+
+    .book > img {
+      width: 250px;
+      height: 325px;
+    }
+}
