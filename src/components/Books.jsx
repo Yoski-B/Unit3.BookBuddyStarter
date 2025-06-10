@@ -6,7 +6,7 @@ const Books = ({books}) => {
 
     return (
         <div>
-            <h2>Check out books from the Library! <Link to='/books/register'>Register Here!</Link></h2>
+           
             <div className="booksContainer">
               {
                 books.map((books) =>{

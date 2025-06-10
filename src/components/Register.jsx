@@ -1,9 +1,10 @@
 /* TODO - add your code to create a functional React component that renders a registration form */
-import {Link} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import axios from "axios"
 
 const Register = () => {
 
+    const navigate = useNavigate()
     const addUser = async (formData) =>{
       try {
         const newUser = {
@@ -11,11 +12,11 @@ const Register = () => {
               lastname: formData.get("lastname"),
               email: formData.get("email"),
               password: formData.get("password")
-
         }
-         const {data} = await axios.post("https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books/users/register", newUser)
+         const {data} = await axios.post("https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/users/register", newUser)
          console.log(data)
-         window.localStorage.setItem()
+         alert("Thanks! Your registration is complete.")
+         navigate('/')
         } catch (error) {
         console.error(error)
       }
